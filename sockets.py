@@ -107,6 +107,15 @@ def read_ws(ws,client):
             break
 
 
+    
+    while True:
+        msg = ws.receive()
+        if (msg is not None):
+            packet = json.loads(msg)
+            send_all_json( packet )
+        else:
+            break
+    
 @sockets.route('/subscribe')
 def subscribe_socket(ws):
     '''Fufill the websocket URL of /subscribe, every update notify the
