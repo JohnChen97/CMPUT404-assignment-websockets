@@ -267,6 +267,9 @@
             socket.onopen = function () {
                 //XXX: TODO What are you going to do here?
                 world_json = JSON.stringify(world)
+                console.log(socket)
+                console.log(world_json)
+                console.log('On open send')
                 socket.send(world_json);
             };
             socket.onerror = function (msg) {
@@ -276,10 +279,11 @@
                 try {
                     debug("WebSocket Recv:" + msg.data);
                     //XXX: TODO What are you going to do here? 
-                    var parsed_data = JSON.parse(msg.data);
-                    
+                    //var parsed_data = JSON.parse(msg.data);
+                    var parsed_data = JSON.parse(msg.data)
+                    console.log('on message send')
                     for (let entity in parsed_data) {
-                        console.log(entity)
+                        console.log(parsed_data[entity])
                         world[entity] = parsed_data[entity]
                     }
                     drawNextFrame()
