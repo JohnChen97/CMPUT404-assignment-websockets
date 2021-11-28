@@ -98,9 +98,19 @@ def read_ws(ws,client):
     # XXX: TODO IMPLEMENT ME
     while True:
         msg = ws.receive()
-        print('WS received: ' + str(msg))
+        #print('WS received: ' + str(msg))
+        #print(msg)
         if msg != None:
+            
             packet = json.loads(msg)
+            #for entity in packet:
+                #print(entity)
+                #print(packet[entity])
+            
+            for key in packet.keys():
+                for x, y in packet[key].items():
+                    myWorld.update(key, x, y)
+           
             send_all_json(packet)
             
         else:
@@ -119,7 +129,14 @@ def subscribe_socket(ws):
         while True:
             
             msg = client.get()
+            #print('subscribe msg')
+            #print(msg)
+            #print(str(myWorld.world()))
+            #the_world = str(myWorld.world()).replace("'", '"')
+            #ws.send(the_world)
             ws.send(msg)
+            
+
     except Exception as e:
         print('failed')
     finally:
