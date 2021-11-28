@@ -132,7 +132,8 @@
             //XXX: Send a XHTML Request that updates the entity you just modified!
             var new_entity = {}
             new_entity[entity] = data;
-            sockets.send(JSON.stringify(data))
+            var new_entity_json = JSON.stringify(new_entity)
+            socket.send(new_entity_json)
         }
         var counter = 0;
         function addEntityWithoutName(data) {
@@ -276,7 +277,12 @@
                     debug("WebSocket Recv:" + msg.data);
                     //XXX: TODO What are you going to do here? 
                     var parsed_data = JSON.parse(msg.data);
-                    world = parsed_data;
+                    
+                    for (let entity in parsed_data) {
+                        console.log(entity)
+                        world[entity] = parsed_data[entity]
+                    }
+                    drawNextFrame()
                 } catch (e) {
                     alert("socket on message: " + e);
                 }
