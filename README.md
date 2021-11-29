@@ -59,3 +59,8 @@ Contributors
 * Mark Galloway
 * Abram Hindle
 * Cole Mackenzie
+
+CCID: jionghao
+Collaborator: jxiang2, hz6
+Websocket Examples from class:
+https://github.com/abramhindle/WebSocketsExamples/blob/master/chat.py
