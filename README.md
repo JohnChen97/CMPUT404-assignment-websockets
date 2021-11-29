@@ -61,6 +61,64 @@ Contributors
 * Cole Mackenzie
 
 CCID: jionghao
+
 Collaborator: jxiang2, hz6
+
 Websocket Examples from class:
 https://github.com/abramhindle/WebSocketsExamples/blob/master/chat.py
+
+Test with:
+
+aniso8601==9.0.1
+
+asgiref==3.4.1
+
+certifi==2021.5.30
+
+charset-normalizer==2.0.6
+
+click==8.0.3
+
+Django==3.2.7
+
+Flask==1.1.2
+
+Flask-Cors==3.0.10
+
+Flask-RESTful==0.3.9
+
+Flask-Sockets==0.2.1
+
+gevent==21.8.0
+
+gevent-websocket==0.10.1
+
+greenlet==1.1.1
+
+gunicorn==20.1.0
+
+idna==3.2
+
+itsdangerous==2.0.1
+
+Jinja2==3.0.3
+
+MarkupSafe==2.0.1
+
+pytz==2021.1
+
+requests==2.26.0
+
+six==1.16.0
+
+sqlparse==0.4.2
+
+urllib3==1.26.7
+
+Werkzeug==1.0.1
+
+ws4py==0.5.1
+
+zope.event==4.5.0
+
+zope.interface==5.4.0
