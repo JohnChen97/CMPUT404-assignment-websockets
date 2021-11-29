@@ -67,6 +67,8 @@ Collaborator: jxiang2, hz6
 Websocket Examples from class:
 https://github.com/abramhindle/WebSocketsExamples/blob/master/chat.py
 
+I used some code from my Assignment4 file.
+
 Work under:
 
 aniso8601==9.0.1
